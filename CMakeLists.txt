@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(P53_T35_STL_list main.cpp
         MyList.h
-        MyDList.h)
+        MyDList.h
+        Date.h
+        Product.h)
