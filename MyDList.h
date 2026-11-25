@@ -43,8 +43,18 @@ public:
         }
     }
     void show() {//Виведення списку на екран
+        DNode<U>* p = head;
+        while (p!= nullptr) {
+            cout << p->info << " ";
+            p = p->next;
+        }
+        cout << endl;
     }
-    void show_reverse() 	{}
+
+    void show_reverse() {//Виведення списку на екран в зворотньому порядку
+
+    }
     DNode<U>* search(U value) { //Пошук вузла із заданим значенням
+        return nullptr;
     }
 };
