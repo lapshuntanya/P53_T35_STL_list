@@ -7,4 +7,6 @@ add_executable(P53_T35_STL_list main.cpp
         MyList.h
         MyDList.h
         Date.h
-        Product.h)
+        Product.h
+        Date.cpp
+        Product.cpp)
