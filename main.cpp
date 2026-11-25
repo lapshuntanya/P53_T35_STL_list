@@ -23,5 +23,16 @@ int main() {
     // }
 
 
+    MyList<int> nums; //head = tail = nullptr;
+
+    nums.push_back(7); //head = &7, tail = &7
+    nums.push_back(2); //head = &7, tail = &2
+    nums.push_back(2); //head = &7, tail = &2
+    nums.push_back(30); //head = &7, tail = &30
+    nums.push_back(587); //head = &7, tail = &587
+    nums.push_back(8); //head = &7, tail = &8
+
+    nums.showMyList();
+
     return 0;
 }
