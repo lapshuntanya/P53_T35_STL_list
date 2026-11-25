@@ -19,3 +19,20 @@ public:
         cout << "\t NEXT: " << next << endl;
     }
 };
+
+
+template <typename U>
+class MyList {
+    Node<U>* head; // покажчик (адреса) на перший вузол
+    Node<U>* tail; // покажчик (адреса) на останній вузол
+public:
+    MyList() {
+        head = tail = nullptr;
+    }
+    ~MyList() {
+        //delete
+    }
+    void push_back(U value) {
+
+    }
+};
