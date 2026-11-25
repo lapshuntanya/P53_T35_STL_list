@@ -33,6 +33,28 @@ public:
         //delete
     }
     void push_back(U value) {
+        //1. Створюємо новий вузол
+        Node<U>* new_element = new Node<U>(value); // info=7, next=nullptr
 
+        //2. Привʼязуємо новий вузол до списку
+        if (head == nullptr || tail == nullptr) {
+            //Це перший вузол в списку
+            head = new_element;
+            tail = new_element;
+            //head = tail = new_element;
+        } else {
+            //Це НЕ перший вузол в списку
+            tail->next = new_element; //Зберігаємо в хвіст адресу нового вузла
+            tail = new_element; //Зсовуємо хвіст на останній елемент
+        }
+
+    }
+
+    void showMyList()const {
+        Node<U>* p = head;
+        while (p!= nullptr) {
+            p->showNode();
+            p = p->next;
+        }
     }
 };
