@@ -52,9 +52,23 @@ public:
     }
 
     void show_reverse() {//Виведення списку на екран в зворотньому порядку
-
+        DNode<U>* p = tail;
+        while (p!= nullptr) {
+            cout << p->info << " ";
+            p = p->prev;
+        }
+        cout << endl;
     }
+
     DNode<U>* search(U value) { //Пошук вузла із заданим значенням
+
+        DNode<U>* p = head;
+        while (p!= nullptr) {
+           if ( p->info == value) {
+               return p;
+           }
+            p = p->next;
+        }
         return nullptr;
     }
 };

@@ -1,5 +1,5 @@
 #include "MyList.h"
-
+#include "MyDList.h"
 
 int main() {
 
@@ -23,7 +23,7 @@ int main() {
     // }
 
 
-    MyList<int> nums; //head = tail = nullptr;
+    DList<int> nums; //head = tail = nullptr;
 
     nums.push_back(7); //head = &7, tail = &7
     nums.push_back(2); //head = &7, tail = &2
@@ -32,7 +32,16 @@ int main() {
     nums.push_back(587); //head = &7, tail = &587
     nums.push_back(8); //head = &7, tail = &8
 
-    nums.showMyList();
+    nums.show();
+    nums.show_reverse();
+
+    DNode<int>* find = nums.search(8);
+    if (find == nullptr) cout << "Not found!\n";
+    else find->showDNode();
+
+    find = nums.search(-8);
+    if (find == nullptr) cout << "Not found!\n";
+    else find->showDNode();
 
     return 0;
 }
