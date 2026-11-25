@@ -21,3 +21,30 @@ public:
         cout << "\t NEXT: " << next << endl;
     }
 };
+
+
+template <typename U>
+class DList {
+    DNode<U>* head;
+    DNode<U>* tail;
+public:
+    DList() { head = nullptr; tail = nullptr; }
+
+    void push_back(U value) { //Добавлення нового вузла в кінець списку
+        DNode<U>* new_element = new DNode<U>(value); // info = 2, prev = next = nullptr
+
+        if (head == nullptr || tail == nullptr) {
+            head = tail = new_element;
+        }else {
+            tail->next = new_element;
+            new_element->prev = tail;
+
+            tail = new_element;
+        }
+    }
+    void show() {//Виведення списку на екран
+    }
+    void show_reverse() 	{}
+    DNode<U>* search(U value) { //Пошук вузла із заданим значенням
+    }
+};
